@@ -12,6 +12,7 @@ namespace Member
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Log: Start Connection");
