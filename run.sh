@@ -3,5 +3,5 @@ RUNTIME=$1
 
 echo $1
 dotnet restore
-dotnet publish -r $RUNTIME -c release
-bin/release/netcoreapp2.2/$RUNTIME/publish/corert-db-dapper
+dotnet publish -r $RUNTIME -c Release
+bin/Release/netcoreapp3.0/$RUNTIME/publish/corert-db-dapper

@@ -1,36 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+<Directives>
   <Application>
     <Assembly Name="corert-db-dapper" Dynamic="Required All" />
+    <Assembly Name="Dapper">
+      <Type Name="Dapper.SqlMapper" Dynamic="Required All" />
+    </Assembly>
+    <Assembly Name="System.Collections" Dynamic="Required All" Serialize="Required All" XmlSerializer="Required All" />
+    <Assembly Name="System.Linq" Dynamic="Required All" Serialize="Required All" XmlSerializer="Required All" />
+    <Assembly Name="MySqlConnector" Dynamic="Required All" />
     <Assembly Name="System.Data.SqlClient" Dynamic="Required All" />
-    <Assembly Name="System.Configuration.ConfigurationManager" Dynamic="Required All" />
-        <!-- <Assembly Name="corert-db-dapper" Dynamic="Required All" />
-        <Assembly Name="System.Configuration.ConfigurationManager" Dynamic="Required All" />
-        <Assembly Name="System.Data.SqlClient" Dynamic="Required All" />
-        <Assembly Name="MySql.Data" Dynamic="Required All" />
-        <Assembly Name="Newtonsoft.Json" Dynamic="Required All" />
-        <Assembly Name="System.Runtime" Dynamic="Required All" />
-        <Assembly Name="System.Linq" Dynamic="Required All" />
-     
-        <Assembly Name="Dapper" Dynamic="Required All" /> -->
-        <!-- <Assembly Name="System.Configuration">
-            <Type Name="System.Configuration.Internal.ConfigSystem.System.Configuration.Internal.IConfigSystem.Init" Dynamic="Required All" />
-            <Type Name="System.Configuration.ClientConfigurationSystem" Dynamic="Required All" />
-            <Type Name="System.Configuration.ConfigurationManager.EnsureConfigurationSystem" Dynamic="Required All" />
-            <Type Name="System.Configuration.ConfigurationManager.PrepareConfigSystem" Dynamic="Required All" />
-            <Type Name="System.Configuration.ConfigurationManager.GetSection" Dynamic="Required All" />
-        </Assembly>
-        <Assembly Name="System.ActivatorImplementation.CreateInstance" Dynamic="Required All" />
-        <Assembly Name="MySql.Data.MySqlClient.MySqlConfiguration">
-            <Type Name="MySql.Data.Replication.ReplicationManager.IsReplicationGroup" Dynamic="Required All" />
-            <Type Name="MySql.Data.MySqlConnection.Open" Dynamic="Required All" />
-            <Type Name="MySql.Data.MySqlClient.State" Dynamic="Required All" />
-            <Type Name="MySql.Data.MySqlClient.Query" Dynamic="Required All" />
-        </Assembly>
-        <Assembly Name="System.Runtime.CompilerServices">
-            <Type Name="System.Runtime.CompilerServices.ClassConstructorRunner.EnsureClassConstructorRun" Dynamic="Required All" />
-            <Type Name="System.Runtime.CompilerServices.ClassConstructorRunner.CheckStaticClassConstructionReturnGCStaticBase" Dynamic="Required All" />
-            <Type Name="System.Runtime.CompilerServices.ClassConstructorRunner.CheckStaticClassConstructionReturnNonGCStaticBase" Dynamic="Required All" />
-        </Assembly> -->
+    <Assembly Name="Newtonsoft.Json" Dynamic="Required All" />
+
+    <Assembly Name="System.Linq.Expressions">
+        <Type Name="System.Linq.Expressions.ExpressionCreator`1[[Newtonsoft.Json.Serialization.ObjectConstructor`1[[System.Object,System.Private.CoreLib]],Newtonsoft.Json]]" Dynamic="Required All" />
+        <Type Name="System.Linq.Expressions.ExpressionCreator`1[[System.Func`2[[System.Object,System.Private.CoreLib],[System.Object,System.Private.CoreLib]],System.Private.CoreLib]]" Dynamic="Required All" />
+      </Assembly>
+      <Assembly Name="mscorlib" />
     </Application>
 </Directives>

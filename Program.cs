@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
@@ -17,12 +16,12 @@ namespace Member
         {
             Console.WriteLine("Log: Start Connection");
 
-            string configDB = "server=localhost;userid=root;password=1234;database=lab;convert zero datetime=True;";
+            string configDB = Environment.GetEnvironmentVariable("DB_CONNECTION");
 
             using (MySqlConnection _connection = new MySqlConnection(configDB))
             {  
                 Console.WriteLine("Log: _connection.ConnectionString: " + _connection.ConnectionString);
-                Console.WriteLine("Log: _connection.ToString: " + _connection.ToString());
+                Console.WriteLine("Log: _connection.ToString: " + _connection);
 
                 if (_connection.State == ConnectionState.Closed)  
                     _connection.Open();  
