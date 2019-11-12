@@ -29,7 +29,7 @@ namespace Member
                 Console.WriteLine("Log: ServerVersion After Open: " + _connection.ServerVersion);
                 Console.WriteLine("Log: State: " + _connection.State.ToString());
 
-                string sqlQuery = "SELECT * FROM member";
+                string sqlQuery = "SELECT * FROM `member`";
                 var result = _connection.Query<Member>(sqlQuery);
                 
                 Console.WriteLine("Log: Result Count: " + result.Count() + "\n");
